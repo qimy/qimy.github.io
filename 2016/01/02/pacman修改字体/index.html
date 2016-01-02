@@ -1,0 +1,395 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CH">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>pacman修改字体 | renshengbuwan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="糖分kong">
+    
+    <meta name="description" content="今天盘算了一下这博客要修修补补的地方，发现我不是处女座也没有强迫症，怎么事情就是那么折腾呢？清单123就放结尾好了，开始正题吧&amp;lt;(￣︶￣)↗[GO!] 
+
+pacman的字体可以分为两种，一种是header和footer的字体样式。一种就是剩下的字，微软雅黑啦，Helvetica Neue啦，">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="renshengbuwan" title="renshengbuwan"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="renshengbuwan">renshengbuwan</a></h1>
+				<h2 class="blog-motto">吃不饱也会胡思乱想</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/reading">Reading</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:renshengbuwan.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/01/02/pacman修改字体/" title="pacman修改字体" itemprop="url">pacman修改字体</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://renshengbuwan.com" title="糖分kong">糖分kong</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2016-01-02T12:53:10.000Z" itemprop="datePublished">Jan 2 2016</time>
+    更新日期:<time datetime="2016-01-02T16:20:10.162Z" itemprop="dateModified">Jan 3 2016</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		
+		</div>
+		
+		<p>今天盘算了一下这博客要修修补补的地方，发现我不是处女座也没有强迫症，怎么事情就是那么折腾呢？清单123就放结尾好了，开始正题吧&lt;(￣︶￣)↗[GO!] </p>
+<hr>
+<p>pacman的字体可以分为两种，一种是<code>header</code>和<code>footer</code>的字体样式。<br>一种就是剩下的字，微软雅黑啦，Helvetica Neue啦，可以随便设。</p>
+<p>而<code>header</code>和<code>footer</code>是英文字体。正常情况下是这样子的。<br><img src="http://7xpnep.com1.z0.glb.clouddn.com/%E4%BF%AE%E6%94%B9%E5%89%8D%E3%80%82%E8%8B%B1%E6%96%87%E5%AD%97.png" alt="renshengbuwan"><br>一旦换成中文，就变成了这个样子。<br><img src="http://7xpnep.com1.z0.glb.clouddn.com/%E4%BF%AE%E6%94%B9%20%E4%B8%AD%E6%96%87%E5%AD%97.png" alt="人生补完"></p>
+<p>咦⊙▽⊙？<br>高大上的艺术字怎么变成了这样呢( -‘`-)？<br>不要啊/(ㄒoㄒ)/~~</p>
+<p>so，换字体吧╮(￣▽￣”)╭ 。</p>
+<p><strong>查看<code>hexo\themes\pacman\config.yml</code></strong></p>
+<pre><code>#### Font
+ShowCustomFont: true
+## you can change custom font in `variable.styl` and `font.styl`which in the theme folder `/pacman/source/css`.
+</code></pre><p><strong>找到<code>variable.styl</code>。查看其中跟字体有关的。</strong></p>
+<pre><code>//Font  
+font-default = &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;,&quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;,Arial, sans-serif  
+font-serif = &quot;Georgia&quot;, serif  
+font-mono = Monaco, Menlo, Consolas, Courier New, monospace
+font-custom-family = &quot;covered_by_your_graceregular&quot;
+font-custom-filename = coveredbyyourgrace-webfont  
+font-icon-family = &quot;FontAwesome&quot;  
+font-icon-filename = fontawesome-webfont  
+font-icon-version = &quot;4.0.3&quot;  
+ShowCustomFont = hexo-config(&quot;ShowCustomFont&quot;)  
+font-size = 100%  
+line-height = 1.5 
+</code></pre><p>以上这段我实在网上粘的，因为本体已经被修改的面目全非了233。<br>恩，高亮代码还木有学会，所以先这样看吧(☄⊙ω⊙)☄。</p>
+<p><code>font-default</code>是页面上用到的字体，按先后顺序排列。可以把喜欢的字体放在前面，也可以任意更换。注意<code>,</code>后面有空格。<br><code>font-mono</code>貌似是代码字体，先后顺序排列。同上。</p>
+<p>下面这两行就是要改的<code>header</code>和<code>footer</code>的字体了。</p>
+<pre><code>font-custom-family = &quot;covered_by_your_graceregular&quot;
+font-custom-filename = coveredbyyourgrace-webfont  
+</code></pre><p>仔细一看，<code>covered by your graceregular</code>？什么鬼( ｀д′ )？<br>管他呢，先换了再说。</p>
+<p>恩，换成什么呢o(` · ~ · ′。)o ？<br>中华文化博大精深啊，要不找个书法字体好啦O(∩_∩)O~<br>哟，这货神似银魂呀，就你啦&lt;(￣ ﹌ ￣)@m。<br><img src="http://7xpnep.com1.z0.glb.clouddn.com/%E5%8F%B6%E6%A0%B9%E5%8F%8B%20%E4%BA%BA%E7%94%9F%E8%A1%A5%E5%AE%8C.png" alt="人生补完"></p>
+<p>什么名字呀(o≖◡≖)？<br>叶根友行书繁。行书哦 ε(*´･∀･｀)зﾞ~<br>那就加进去好啦 σ`∀´ )σ~<br>咦，它叫什么来着⊙▽⊙？<br>叶-根-友-行-书-繁。英文名是啥呀( ⊙ o ⊙ )！<br>要是没有英文名，加个中文名可以不(⊙_⊙)?<br>试一下试一下ლ(╹◡╹ლ)~</p>
+<pre><code>$ hexo s
+INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.ERROR Asset render failed: css/style.css
+ParseError: F:/renshengbuwan/hexo/themes/pacman/source/css/_base/variable.styl:35:38
+...
+34| font-custom-family = &quot;coveredbyyourgrace&quot;
+35| font-custom-filename = 叶友根行书繁-webfont
+...
+</code></pre><p>好啦好啦，我知道错了(。﹏。*)。<br>再改再改 ಠ_ಠ。</p>
+<p>求助于万能的Google大神，诶，好像没有人跟我一样专注于修改字体呀 δ△δ？<br>纳尼？大家用的都是英文 ( | | |ﾟдﾟ)？<br>(￣_￣| | |) 。。。</p>
+<p>额，再找找吧，不能没有人感兴趣过吧(≖ᴗ≖๑)。</p>
+<p>然后，就发现了一篇言简意赅深入浅出的博文→<a href="http://www.jianshu.com/p/b564b722f700#" target="_blank" rel="external">在网页中插入特殊字体,浅谈@font-face</a>。<br>感谢博主<strong>masukio</strong>o(*￣▽￣)ゞ 。</p>
+<p>总之呢，这个字体不能那么简单的说换就换。<br>我们就按照步骤开始吧(ง •_•)ง。</p>
+<p><strong>下载叶根友简书繁字体</strong></p>
+<p><strong>上传<a href="http://www.fontsquirrel.com/tools/webfont-generator" target="_blank" rel="external">fontsqirrel</a>网站</strong><br>按下图点选选项。<br><img src="http://7xpnep.com1.z0.glb.clouddn.com/update%20font.png" alt="update fonts"><br>点击download your kit 下载。<br><img src="http://7xpnep.com1.z0.glb.clouddn.com/download%20yourkid.png" alt="download"></p>
+<p>得到一个.zip的压缩包。解压后将<code>.eot</code> <code>.svg</code> <code>.ttf</code> 以及<code>.woff</code>统统塞到<code>hexo\themes\pacman\source\font</code>文件夹里。</p>
+<p><strong>打开<code>hexo\themes\pacman\source\css\_base\variable.styl</code></strong><br>将下面两行里的<code>coveredbyyourgrace</code>修改为刚刚塞进去的那几个文件名。我的是<code>ygyxsf</code>。</p>
+<pre><code>font-custom-family = &quot;covered_by_your_graceregular&quot;
+font-custom-filename = coveredbyyourgrace-webfont
+</code></pre><p>改为</p>
+<pre><code>font-custom-family = &quot;ygyxsf&quot;
+font-custom-filename = ygyxsf-webfont
+</code></pre><p>然后</p>
+<blockquote>
+<p>$ hexo g<br>   $ hexo s</p>
+</blockquote>
+<p><strong><code>loaclhost:4000</code></strong>看一看(o゜▽゜)o☆[~</p>
+<p><img src="http://7xpnep.com1.z0.glb.clouddn.com/%E4%BF%AE%E6%94%B9%20%E4%B8%AD%E6%96%87%E5%AD%97.png" alt="cc"></p>
+<p>诶诶诶诶诶诶诶诶 ( ´ﾟДﾟ`)？！<br>这剧本不对啊Σヽ(ﾟД ﾟ; )ﾉ！<br>说好的高大上行书字体呢(╯‵□′)╯︵┻━┻！</p>
+<p>再看看(눈_눈)。<br>嘛，不支持中文字体啊━┳━　━┳━ 。</p>
+<p>等等，有字库(╬ﾟдﾟ)！<br>这个可以有哇(`・ω・´)。</p>
+<p>再来再来(〃∀〃)！</p>
+<p><strong>注册<a href="http://www.youziku.com/" target="_blank" rel="external">有字库</a></strong></p>
+<blockquote>
+<p><a href="http://www.youziku.com/" target="_blank" rel="external">http://www.youziku.com/</a></p>
+</blockquote>
+<p><strong>进入个人中心，托管字体</strong><br>按照相应情况填写。注意点选<strong>托管</strong>，而不是分享。<br><img src="http://7xpnep.com1.z0.glb.clouddn.com/%E5%AD%97%E4%BD%93%E4%B8%8A%E4%BC%A0.png" alt="gerenzhongxin"></p>
+<p>提交后，通过审核，就可以尽情使用啦(❛◡❛✿)。</p>
+<p>恩，目前我还处于审核阶段，咳咳＞＜。</p>
+<p>审核完之后，应该就是生成字体，调用CSS，添加在<code>header</code>中就可以啦。<br>待我审核完鉴定一下•_ゝ• 。</p>
+<p>以上！</p>
+<hr>
+<p>下面是废话啦，今天写的清单123列一下。</p>
+<ol>
+<li>评论。我喜欢A站原来的评论啊，不知道那个怎么做o(一︿一+)o。</li>
+<li>top 按钮。</li>
+<li>香菜千代什么的。。我想要阿银啊。。</li>
+<li>配色。橙黑什么的，我对原ac的配色很是怀念啊。</li>
+<li>底下那一条线吊一个头像的，考虑加一个拉长回弹到顶部的吧。。。（虽然实现不了= =</li>
+<li>侧边栏都是异端！</li>
+<li>常驻一个播放器，网易云就好。。。</li>
+<li>看过的动画考虑放一下下载地址吧？嘛，还是算了，评论都搞不定的人啊，想得太多了。。。</li>
+<li>字体。繁简中英看得我好尴尬，辣么大的宋体字我会害羞的⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄。</li>
+<li>about页面。</li>
+<li>暂时就这样。</li>
+</ol>
+<hr>
+<p>插☆入☆代☆码☆大☆失☆败☆！！<br>我很痛心(;´ ༎ Д ༎ `)！！！</p>
+<hr>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/pacman/">pacman</a><a href="/tags/字体/">字体</a>
+  </div>
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://renshengbuwan.com/2016/01/02/pacman修改字体/" data-title="pacman修改字体 | renshengbuwan" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/01/01/博客什么的好艰难啊/"  title="博客什么的好艰难啊">
+ <strong>NEXT:</strong><br/> 
+ <span>博客什么的好艰难啊
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目錄</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">標簽</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/pacman/" title="pacman">pacman<sup>1</sup></a></li>
+		
+			<li><a href="/tags/动画/" title="动画">动画<sup>1</sup></a></li>
+		
+			<li><a href="/tags/字体/" title="字体">字体<sup>1</sup></a></li>
+		
+			<li><a href="/tags/流水账/" title="流水账">流水账<sup>1</sup></a></li>
+		
+			<li><a href="/tags/钓球/" title="钓球">钓球<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 訂閱</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="http://renshengbuwan.com" target="_blank" title="糖分kong">糖分kong</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>
